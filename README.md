@@ -1,57 +1,58 @@
 # Bayt Python Jobs Scraper
 
-Async Playwright scraper that extracts **Python jobs from Bayt.com (Pakistan)** with full pagination support and exports results to Excel.
+**Async Playwright scraper** that extracts Python jobs from Bayt.com (Pakistan) with full pagination and exports to Excel.
 
-## Results
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![Playwright](https://img.shields.io/badge/Playwright-Async-green?logo=playwright)](https://playwright.dev/python/)
+[![GitHub](https://img.shields.io/badge/GitHub-ahmadraza--automation-181717?logo=github)](https://github.com/ahmadraza-automation)
+
+---
+
+### Results
 
 | Metric | Value |
 |--------|-------|
-| Jobs scraped | **281** |
+| Jobs scraped | **281+** |
 | Source | [Bayt.com – Python Jobs (Pakistan)](https://www.bayt.com/en/pakistan/jobs/python-jobs/) |
 | Output | `bayt_python_jobs.xlsx` |
 | Fields | Title, Company, Location, Description, URL |
 
-## Features
+---
 
-- Full pagination (`?page=1`, `?page=2`, ...) — no page limit
+### Features
+
+- Full pagination support
 - Collects all job URLs across pages
 - Extracts Title, Company, Location, Description, URL
-- Anti-detection (stealth user-agent + webdriver flag disabled)
+- Anti-detection (stealth user-agent + webdriver disabled)
 - Human-like random delays
-- Exports clean data to Excel
+- Clean Excel export
 - Duplicate URL removal
 
-## Tech Stack
+---
 
-- Python 3
-- Playwright (async)
-- Pandas + openpyxl
-
-## Setup
+### Installation
 
 ```bash
 pip install -r requirements.txt
 playwright install chromium
 ```
 
-## Run
+---
+
+### Usage
 
 ```bash
 python bayt_scraper.py
 ```
 
-Output file: `bayt_python_jobs.xlsx`
+---
 
-## Sample Output
+### Author
 
-See `sample_jobs.csv` for a sample of scraped jobs.
-
-## Notes
-
-- Runs with `headless=False` by default (visible browser)
-- Stops automatically when a page returns 0 jobs
-- Safety limit of 100 pages included
+**Ahmad Raza** — Python Automation Engineer  
+[GitHub](https://github.com/ahmadraza-automation) • [Portfolio](https://ahmadraza-automation.github.io/Ahmad-Raza-Automation-Portfolio/)
 
 ---
 
-Built by [Ahmad Raza](https://github.com/ahmadraza-automation) · [Portfolio](https://github.com/ahmadraza-automation/Ahmad-Raza-Automation-Portfolio)
+If you find this useful, please give it a ⭐
